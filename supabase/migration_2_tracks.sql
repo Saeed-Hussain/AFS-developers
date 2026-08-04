@@ -48,12 +48,23 @@ create policy "Admins can delete applications"
   to authenticated
   using (true);
 
--- 4. Verify: this should list exactly 4 policies (insert/select/update/delete).
+-- 4. The application form no longer asks for coding experience or laptop
+--    ownership, so new submissions won't include them. Both columns are
+--    currently NOT NULL, which would make every new insert fail. Relax
+--    that (has_laptop already has a default of false, so only
+--    experience_level strictly needs this):
+alter table public.applications
+  alter column experience_level drop not null;
+
+alter table public.applications
+  alter column has_laptop drop not null;
+
+-- 5. Verify: this should list exactly 4 policies (insert/select/update/delete).
 select polname, polcmd, polroles::regrole[]
 from pg_policy
 where polrelid = 'public.applications'::regclass;
 
--- 5. Verify you actually have rows and can see them as admin:
+-- 6. Verify you actually have rows and can see them as admin:
 --    run this while logged in as the SQL editor's postgres role (bypasses
 --    RLS) just to confirm data exists at all:
 select id, full_name, email, course, status, created_at

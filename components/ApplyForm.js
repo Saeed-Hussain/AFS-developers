@@ -15,20 +15,12 @@ const heardFromOptions = [
   "Other",
 ];
 
-const experienceOptions = [
-  { value: "none", label: "Complete beginner" },
-  { value: "some", label: "Some self-taught experience" },
-  { value: "comfortable", label: "Comfortable with the basics" },
-];
-
 const initialState = {
   full_name: "",
   email: "",
   whatsapp: "",
   city: "",
   course: "",
-  experience_level: "",
-  has_laptop: "",
   motivation: "",
   heard_from: "",
 };
@@ -55,8 +47,6 @@ export default function ApplyForm({ presetCourse }) {
     if (!/^[0-9+\-\s]{7,15}$/.test(form.whatsapp)) e.whatsapp = "Enter a valid WhatsApp number.";
     if (!form.city.trim()) e.city = "Enter your city.";
     if (!form.course) e.course = "Choose a track.";
-    if (!form.experience_level) e.experience_level = "Select your experience level.";
-    if (!form.has_laptop) e.has_laptop = "Let us know if you have a laptop.";
     if (!form.motivation.trim() || form.motivation.trim().length < 20)
       e.motivation = "Tell us a little more (20+ characters).";
     setErrors(e);
@@ -77,8 +67,6 @@ export default function ApplyForm({ presetCourse }) {
         whatsapp: form.whatsapp.trim(),
         city: form.city.trim(),
         course: form.course,
-        experience_level: form.experience_level,
-        has_laptop: form.has_laptop === "yes",
         motivation: form.motivation.trim(),
         heard_from: form.heard_from || null,
       },
@@ -189,73 +177,16 @@ export default function ApplyForm({ presetCourse }) {
         </div>
       </Field>
 
-      <div className="grid sm:grid-cols-2 gap-5">
-        <Field label="Coding experience" error={errors.experience_level}>
-          <div className="flex flex-col gap-2">
-            {experienceOptions.map((opt) => (
-              <label
-                key={opt.value}
-                className={`flex items-center gap-2.5 rounded-md border px-3.5 py-2.5 cursor-pointer text-sm transition-colors ${
-                  form.experience_level === opt.value
-                    ? "border-signal bg-signal/10 text-mist"
-                    : "border-white/10 text-mist-dim hover:border-white/25"
-                }`}
-              >
-                <input
-                  type="radio"
-                  name="experience_level"
-                  className="accent-signal"
-                  checked={form.experience_level === opt.value}
-                  onChange={() => update("experience_level")(opt.value)}
-                />
-                {opt.label}
-              </label>
-            ))}
-          </div>
-        </Field>
-
-        <Field label="Do you have your own laptop?" error={errors.has_laptop}>
-          <div className="flex gap-3">
-            {["yes", "no"].map((v) => (
-              <label
-                key={v}
-                className={`flex-1 text-center rounded-md border px-3.5 py-2.5 cursor-pointer text-sm capitalize transition-colors ${
-                  form.has_laptop === v
-                    ? "border-signal bg-signal/10 text-mist"
-                    : "border-white/10 text-mist-dim hover:border-white/25"
-                }`}
-              >
-                <input
-                  type="radio"
-                  name="has_laptop"
-                  className="hidden"
-                  checked={form.has_laptop === v}
-                  onChange={() => update("has_laptop")(v)}
-                />
-                {v}
-              </label>
-            ))}
-          </div>
-
-          <div className="mt-5">
-            <label className="block text-xs font-mono text-mist-faint mb-2">
-              How did you hear about us? (optional)
-            </label>
-            <select
-              value={form.heard_from}
-              onChange={update("heard_from")}
-              className={inputClass()}
-            >
-              <option value="">Select one</option>
-              {heardFromOptions.map((o) => (
-                <option key={o} value={o}>
-                  {o}
-                </option>
-              ))}
-            </select>
-          </div>
-        </Field>
-      </div>
+      <Field label="How did you hear about us? (optional)">
+        <select value={form.heard_from} onChange={update("heard_from")} className={inputClass()}>
+          <option value="">Select one</option>
+          {heardFromOptions.map((o) => (
+            <option key={o} value={o}>
+              {o}
+            </option>
+          ))}
+        </select>
+      </Field>
 
       <Field label="Why do you want to join this cohort?" error={errors.motivation}>
         <textarea

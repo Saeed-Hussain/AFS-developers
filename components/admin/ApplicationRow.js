@@ -126,14 +126,18 @@ export default function ApplicationRow({ app, onUpdate, onDelete }) {
                 <p className="flex items-center gap-2 text-mist-dim">
                   <MapPin size={14} className="text-signal shrink-0" /> {app.city}
                 </p>
-                <p className="flex items-center gap-2 text-mist-dim">
-                  <Laptop2 size={14} className="text-signal shrink-0" />
-                  {app.has_laptop ? "Has a laptop" : "No laptop yet"}
-                </p>
-                <p className="text-mist-dim">
-                  <span className="text-mist-faint">Experience:</span>{" "}
-                  {experienceLabel[app.experience_level] || app.experience_level}
-                </p>
+                {app.has_laptop !== null && app.has_laptop !== undefined && (
+                  <p className="flex items-center gap-2 text-mist-dim">
+                    <Laptop2 size={14} className="text-signal shrink-0" />
+                    {app.has_laptop ? "Has a laptop" : "No laptop yet"}
+                  </p>
+                )}
+                {app.experience_level && (
+                  <p className="text-mist-dim">
+                    <span className="text-mist-faint">Experience:</span>{" "}
+                    {experienceLabel[app.experience_level] || app.experience_level}
+                  </p>
+                )}
                 {app.heard_from && (
                   <p className="text-mist-dim">
                     <span className="text-mist-faint">Heard from:</span> {app.heard_from}

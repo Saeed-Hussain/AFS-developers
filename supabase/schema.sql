@@ -15,8 +15,9 @@ create table if not exists public.applications (
   city text not null,
 
   course text not null check (course in ('full-stack', 'app-dev')),
-  experience_level text not null check (experience_level in ('none', 'some', 'comfortable')),
-  has_laptop boolean not null default false,
+  -- no longer collected on the form; kept (nullable) for historical rows
+  experience_level text check (experience_level in ('none', 'some', 'comfortable')),
+  has_laptop boolean default false,
   motivation text not null,
   heard_from text,
 
