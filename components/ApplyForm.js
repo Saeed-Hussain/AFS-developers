@@ -76,7 +76,7 @@ export default function ApplyForm({ presetCourse }) {
       console.error(error);
       setStatus("error");
       setErrorMessage(
-        "We couldn't submit your application. Check your connection and try again — or message us directly on WhatsApp."
+        `We couldn't submit your application (${error.message}). Try again, or message us directly on WhatsApp.`
       );
       return;
     }
