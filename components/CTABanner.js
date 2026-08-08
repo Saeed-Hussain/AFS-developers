@@ -19,13 +19,16 @@ export default function CTABanner() {
         >
           <div className="absolute inset-0 bp-grid-fine opacity-40 [mask-image:radial-gradient(ellipse_70%_70%_at_50%_30%,black,transparent)]" />
           <div className="relative flex flex-col items-center text-center gap-6 max-w-2xl mx-auto">
-            <p className="font-mono text-xs text-signal">$ ./apply.sh --cohort 2026</p>
+            <p className="font-mono text-xs text-signal">$ ./apply.sh --deadline 2026-08-15</p>
             <h2 className="font-display text-3xl sm:text-4xl text-mist">
               Admissions are open for the 2026 cohort.
             </h2>
+            <p className="inline-flex items-center gap-2 rounded-full border border-amber/30 bg-amber/10 px-3.5 py-1 font-mono text-xs text-amber">
+              Last date to apply: 15 August 2026
+            </p>
             <p className="text-mist-dim text-lg">
-              Seats are limited to keep mentorship close to one-on-one. Apply now — we review
-              every application personally.
+              Seats are limited to keep mentorship close to one-on-one. Apply before the
+              deadline — we review every application personally.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
               <button
@@ -36,7 +39,7 @@ export default function CTABanner() {
                 <ArrowUpRight size={18} />
               </button>
               <a
-                href="https://wa.me/923167122831?text=Hi%20AFS%20Developers!%20I'd%20like%20to%20know%20more%20about%20the%202026%20cohort."
+                href="https://wa.me/923334534520?text=Hi%20AFS%20Developers!%20I'd%20like%20to%20know%20more%20about%20the%202026%20cohort."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-mono text-sm text-mist-dim hover:text-mist transition-colors"

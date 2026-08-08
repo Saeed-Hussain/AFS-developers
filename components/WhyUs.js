@@ -31,8 +31,8 @@ const features = [
   },
   {
     icon: Laptop2,
-    title: "Flexible online classes",
-    desc: "Via Google Meet, timed to fit around university or work schedules.",
+    title: "Complete step-by-step guidance",
+    desc: "From the very basics to publishing your project — a full curriculum, nothing skipped.",
   },
 ];
 

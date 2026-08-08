@@ -6,6 +6,10 @@ import { Plus } from "lucide-react";
 
 const faqs = [
   {
+    q: "When is the last date to apply?",
+    a: "15 August 2026. Applications close for the 2026 cohort on this date, so apply early — seats are limited to keep mentorship close to one-on-one.",
+  },
+  {
     q: "Do I need any coding experience to apply?",
     a: "No. Both tracks are built for complete beginners. If you already know the basics, we'll move faster with you — but zero experience is the default assumption.",
   },

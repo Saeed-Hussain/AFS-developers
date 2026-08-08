@@ -57,6 +57,9 @@ export default function ApplyModal() {
                 <h2 className="font-display text-xl sm:text-2xl text-mist mt-1">
                   Apply to AFS Developers
                 </h2>
+                <p className="font-mono text-[11px] text-amber mt-1.5">
+                  Last date to apply: 15 August 2026
+                </p>
               </div>
               <button
                 onClick={close}

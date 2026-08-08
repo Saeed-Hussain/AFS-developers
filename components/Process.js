@@ -45,6 +45,10 @@ export default function Process() {
           <h2 className="font-display text-3xl sm:text-4xl text-mist">
             From application to shipped portfolio.
           </h2>
+          <p className="text-mist-dim mt-4 text-lg">
+            Complete, step-by-step guidance at every stage — nothing skipped, nothing left for
+            you to figure out alone.
+          </p>
         </motion.div>
 
         <div className="relative">

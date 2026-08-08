@@ -93,7 +93,7 @@ The WhatsApp number and social links live in `components/Footer.js`, `components
 and `components/ApplyForm.js` (the WhatsApp link on the success screen), plus
 `components/admin/ApplicationRow.js` (used for messaging applicants directly). Every link
 opens a WhatsApp chat with a pre-filled message — never a phone call. Search for
-`923167122831` to update the number everywhere.
+`923334534520` to update the number everywhere.
 
 ## Admin dashboard
 
