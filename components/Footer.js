@@ -69,7 +69,7 @@ export default function Footer() {
           <p className="font-mono text-xs text-mist-faint">
             © {year} AFS Developers. Built in Bhakkar.
           </p>
-          <p className="font-mono text-xs text-mist-faint">admissions open · apply by 15 Aug 2026</p>
+          <p className="font-mono text-xs text-mist-faint">admissions open · apply by 20 Aug 2026</p>
         </div>
       </div>
     </footer>

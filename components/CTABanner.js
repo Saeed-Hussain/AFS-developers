@@ -19,12 +19,12 @@ export default function CTABanner() {
         >
           <div className="absolute inset-0 bp-grid-fine opacity-40 [mask-image:radial-gradient(ellipse_70%_70%_at_50%_30%,black,transparent)]" />
           <div className="relative flex flex-col items-center text-center gap-6 max-w-2xl mx-auto">
-            <p className="font-mono text-xs text-signal">$ ./apply.sh --deadline 2026-08-15</p>
+            <p className="font-mono text-xs text-signal">$ ./apply.sh --deadline 2026-08-20</p>
             <h2 className="font-display text-3xl sm:text-4xl text-mist">
               Admissions are open for the 2026 cohort.
             </h2>
             <p className="inline-flex items-center gap-2 rounded-full border border-amber/30 bg-amber/10 px-3.5 py-1 font-mono text-xs text-amber">
-              Last date to apply: 15 August 2026
+              Last date to apply: 20 August 2026
             </p>
             <p className="text-mist-dim text-lg">
               Seats are limited to keep mentorship close to one-on-one. Apply before the

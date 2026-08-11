@@ -9,7 +9,7 @@ const stats = [
   { value: "2", label: "tracks" },
   { value: "12", label: "weeks each" },
   { value: "100%", label: "online" },
-  { value: "Aug 15", label: "apply by" },
+  { value: "Aug 20", label: "apply by" },
 ];
 
 export default function Hero() {
@@ -31,7 +31,7 @@ export default function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-signal opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-signal" />
           </span>
-          Admissions open · apply by 15 Aug 2026 · Bhakkar
+          Admissions open · apply by 20 Aug 2026 · Bhakkar
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-10 items-center">
