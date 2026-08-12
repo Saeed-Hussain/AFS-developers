@@ -41,7 +41,7 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <MessageCircle size={15} className="text-signal shrink-0" />
                 <a
-                  href="https://wa.me/923334534520?text=Hi%20AFS%20Developers!%20I%20have%20a%20question%20about%20the%202026%20cohort."
+                  href="https://wa.me/923167122831?text=Hi%20AFS%20Developers!%20I%20have%20a%20question%20about%20the%202026%20cohort."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-mist transition-colors"

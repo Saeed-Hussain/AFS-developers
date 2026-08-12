@@ -39,7 +39,7 @@ export default function CTABanner() {
                 <ArrowUpRight size={18} />
               </button>
               <a
-                href="https://wa.me/923334534520?text=Hi%20AFS%20Developers!%20I'd%20like%20to%20know%20more%20about%20the%202026%20cohort."
+                href="https://wa.me/923167122831?text=Hi%20AFS%20Developers!%20I'd%20like%20to%20know%20more%20about%20the%202026%20cohort."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-mono text-sm text-mist-dim hover:text-mist transition-colors"

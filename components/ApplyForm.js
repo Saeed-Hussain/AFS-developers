@@ -105,7 +105,7 @@ export default function ApplyForm({ presetCourse }) {
           follow up on WhatsApp with next steps.
         </p>
         <a
-          href={`https://wa.me/923334534520?text=${encodeURIComponent(
+          href={`https://wa.me/923167122831?text=${encodeURIComponent(
             `Hi, I am ${form.full_name} and I want to apply for the ${
               courses.find((c) => c.slug === form.course)?.name || "cohort"
             } course.`
